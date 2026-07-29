@@ -24,5 +24,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    const navbar = document.getElementById('navbarNav');
+    if (navbar && navbar.classList.contains('show')) {
+      const toggler = document.querySelector('.navbar-toggler');
+      if (toggler) toggler.click();
+    }
   });
 });
